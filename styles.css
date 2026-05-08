@@ -385,6 +385,7 @@ section {
   color: var(--muted);
 }
 .project:hover .arrow { opacity: 1; transform: translateX(0); }
+.title-br { display: none; }
 
 .project .body {
   grid-column: 2 / -1;
@@ -637,6 +638,11 @@ section {
 
   /* remove hover indent so project title width is stable on touch */
   .project:hover { padding-left: 0; background: none; }
+  /* on touch: arrow only visible when card is actually open */
+  .project:hover .arrow { opacity: 0; transform: translateX(-4px); }
+  .project.open .arrow { opacity: 1; transform: rotate(90deg) translateX(0); }
+  /* force line break before "system" in route35 title */
+  br.title-br { display: block; }
 
   /* contact */
   .send-btn { width: 100%; }
