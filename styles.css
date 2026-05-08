@@ -623,6 +623,7 @@ section {
   .project {
     grid-template-columns: 70px 1fr;
     gap: 4px 14px;
+    align-items: start;
   }
   .project .meta { grid-column: 2; }
   .project .body { grid-column: 1 / -1; }
