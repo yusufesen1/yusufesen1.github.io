@@ -602,8 +602,8 @@ section {
 }
 
 @media (max-width: 760px) {
-  .about-grid { grid-template-columns: 1fr; gap: 28px; }
-  .photo { max-width: 280px; margin: 0 auto; }
+  .about-grid { display: flex; flex-direction: column; gap: 28px; }
+  .photo { max-width: 260px; margin: 0 auto; }
   .nav-inner { padding: 16px 24px; }
   .logo img { height: 40px; }
   .hero {

@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/yme_logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/yme_logo.png">
 </head>
 <body data-screen-label="01 Home (EN)" style="background-color: rgb(6, 6, 6)">
   <div class="glow"></div>
@@ -296,6 +298,13 @@
         });
     });
     // ─────────────────────────────────────────────────────────
+
+    // prevent iOS emoji rendering for arrow characters
+    document.querySelectorAll('.arrow, .more').forEach(el => {
+      el.childNodes.forEach(n => {
+        if (n.nodeType === 3) n.textContent = n.textContent.replace(/([↗↓→])/g, '$1︎');
+      });
+    });
 
     // typewriter
     (function () {
