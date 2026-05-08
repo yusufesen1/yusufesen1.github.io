@@ -97,17 +97,20 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
 .lang {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   letter-spacing: 0.04em;
   color: var(--muted);
+  border: 1px solid #333;
+  border-radius: 999px;
+  padding: 4px 6px;
 }
 
-.lang a { padding: 4px 6px; transition: color 0.2s ease; }
-.lang a.active { color: var(--fg); }
+.lang a { padding: 3px 8px; border-radius: 999px; transition: color 0.2s ease, background 0.2s ease; }
+.lang a.active { color: #0a0a0a; background: #ededed; }
 .lang a:hover { color: var(--hover); }
-.lang .sep { opacity: 0.4; }
+.lang .sep { display: none; }
 
 /* ---------- layout ---------- */
 main { position: relative; z-index: 1; }
