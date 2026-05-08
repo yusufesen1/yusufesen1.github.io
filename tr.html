@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>yusuf mıraz esen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-screen-label="01 Anasayfa (TR)" style="background-color: rgb(6, 6, 6)">
+  <div class="glow"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo" aria-label="yusuf mıraz esen — anasayfa">
+        <img src="assets/yme_logo.png" alt="yme logo" />
+      </a>
+      <nav class="lang" aria-label="dil">
+        <a href="tr.html" class="active">tr</a>
+        <span class="sep">/</span>
+        <a href="index.html">eng</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- hero -->
+    <section class="hero">
+      <h1 class="motto">i built to understand.</h1>
+      <p class="intro">
+        merhaba! ben yusuf mıraz, türkiye'de yaşayan bir yönetim bilişim sistemleri öğrencisiyim. hakkımda daha fazla bilgi almak istersen sayfayı kaydırmaya devam et.
+      </p>
+      <nav class="hero-nav" aria-label="sayfa bölümleri">
+        <a href="#about">hakkımda</a>
+        <a href="#projects">projeler</a>
+        <a href="#contact">iletişim</a>
+      </nav>
+    </section>
+
+    <!-- about -->
+    <section class="section-block about" id="about">
+      <div class="about-hero">
+        <h2 class="section-title">hakkımda</h2>
+        <div class="about-grid">
+          <figure class="photo">
+            <img src="assets/yusuf.jpeg" alt="yusuf mıraz esen" />
+          </figure>
+          <div class="about-text">
+            <p>
+              ben yusuf mıraz esen, dokuz eylül üniversitesi yönetim bilişim sistemleri öğrencisiyim. backend geliştirme, sistem analizi ve veri odaklı uygulamalar üzerine çalışıyorum. crm sistemleri, karar destek dashboard'ları, cbs tabanlı uygulamalar ve gömülü donanım projeleri geliştirdim. çalışmalarım çoğunlukla node.js, python ve ilişkisel veritabanları etrafında dönüyor.
+            </p>
+            <div class="about-actions">
+              <a class="btn primary" href="assets/YusufMirazESEN-TR.pdf" target="_blank" rel="noopener" download>
+                cv'yi indir <span class="arrow">↓</span>
+              </a>
+              <a class="btn" href="https://www.linkedin.com/in/yusufmesen/" target="_blank" rel="noopener">
+                linkedin <span class="arrow">↗</span>
+              </a>
+              <a class="btn" href="https://github.com/yusufesen1" target="_blank" rel="noopener">
+                github <span class="arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-story">
+        <h3 class="story-subtitle">hikayem</h3>
+        <div class="story-text">
+          <p>sistemlerin nasıl çalıştığını anlamayı seviyorum. sadece çalışıyor olmasının pek bir şey ifade etmediğini de zamanla öğrendim. çoğu zaman işin içinde node.js, python, veritabanı ve arada bir haritalar oluyor. şehir içi ulaşım için dashboard'lar, gerçek iş problemleri için backend sistemleri, çevresel veriler için harita tabanlı araçlar yazdım — bir ara raspberry pi'a da bulaştım, çünkü görünüşe göre sadece kod yazmak yeterli gelmemişti.</p>
+          <p>zamanla şuna ikna oldum: "çalışan kod" ile "düzgün kurulmuş sistem" tamamen ayrı iki tür, ve ben hâlâ ikisini ayırt etmeyi öğreniyorum.</p>
+          <p>burası da inşa ettiğim, bozduğum, baştan yazdığım ve ara sıra ilk denemede tutturduğum (nadir oluyor ama oluyor) şeyleri biriktirdiğim yer. takılın biraz — kurcalanmaya değecek bir şey çıkar büyük ihtimalle.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="projects">
+      <h2 class="section-title">projeler</h2>
+      <div class="projects-list">
+        <div class="year-group-label">2026</div>
+        <article class="project" data-project>
+          <div class="year">mayıs 2026</div>
+          <div>
+            <div class="title">milano building detection <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">derin öğrenme · u-net</div>
+          <div class="body">
+            <p>erasmus döneminde yaşadığım mahalle olan milano'daki via luca ghini bölgesi için, sentinel-2 uydu görüntülerinden bina sınırlarını otomatik tespit eden bir u-net modeli eğittim. ortalama iou <span class="preserve-case">85.1%</span> — akademik literatürde araştırma kalitesi sayılan bir seviye.</p>
+            <div class="chips">
+              <span class="chip">python</span>
+              <span class="chip">pytorch</span>
+              <span class="chip">u-net · 31m param</span>
+              <span class="chip">sentinel-2</span>
+              <span class="chip">overture maps</span>
+              <span class="chip">colab · t4 gpu</span>
+            </div>
+            <a class="more" href="https://github.com/yusufesen1/gis-deeplearning-milano" target="_blank" rel="noopener">github'da gör ↗</a>
+          </div>
+        </article>
+
+        <article class="project" data-project>
+          <div class="year">nis 2026</div>
+          <div>
+            <div class="title">paribu code night <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">blockchain · yarışma</div>
+          <div class="body">
+            <p>paribu sponsorluğundaki hackathon'da takımlara gerçek blockchain datası verildi ve kazancı maksimize edecek bir algoritma geliştirmemiz istendi. veriyi eğitip modelledik, ardından geliştirdiğimiz ticaret algoritması tüm takımlar arasında simüle edildi.</p>
+            <div class="chips">
+              <span class="chip">blockchain</span>
+              <span class="chip">algoritma tasarımı</span>
+              <span class="chip">veri modelleme</span>
+            </div>
+            <a class="more" href="https://github.com/yusufesen1/takim10_MIStrio" target="_blank" rel="noopener">github'da gör ↗</a>
+          </div>
+        </article>
+
+        <div class="year-group-label">2025</div>
+        <article class="project" data-project>
+          <div class="year">ara 2025</div>
+          <div>
+            <div class="title">dijital sipariş köprüsü <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">backend · node.js</div>
+          <div class="body">
+            <p>fabrika ile bayiler arası sipariş yönetimini dijitalleştiren bir crm sistemi geliştirdim. backend mimarisini tasarladım, stok ve satış akışlarını kapsadım. dört kişilik takım.</p>
+            <div class="chips">
+              <span class="chip">node.js</span>
+              <span class="chip">crm</span>
+              <span class="chip">backend mimari</span>
+              <span class="chip">4 kişilik takım</span>
+            </div>
+            <a class="more" href="https://github.com/yusufesen1/dijital-siparis-koprusu" target="_blank" rel="noopener">github'da gör ↗</a>
+          </div>
+        </article>
+
+        <article class="project" data-project>
+          <div class="year">kas 2025</div>
+          <div>
+            <div class="title">blue twin <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">cbs · hackathon · 3.lük</div>
+          <div class="body">
+            <p>i̇zmir'deki su kirliliğini izleyen web tabanlı bir sistem. gerçek zamanlı konumsal veriyle interaktif harita görselleştirmeleri, çevresel verinin erişilebilir sunumu. dört kişilik takım.</p>
+            <div class="chips">
+              <span class="chip">cbs</span>
+              <span class="chip">qgis</span>
+              <span class="chip">google earth</span>
+              <span class="chip">interaktif harita</span>
+              <span class="chip">gerçek zamanlı veri</span>
+              <span class="chip">3.lük</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-project>
+          <div class="year">kas 2025</div>
+          <div>
+            <div class="title">route35 — karar destek sistemi <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">full-stack · cbs · dashboard</div>
+          <div class="body">
+            <p>i̇zmir toplu taşıma akışlarını analiz eden yönetim panosu. metro, tramvay ve otobüs verilerini birleştirdim, veri tabanı mimarisini ve sistem mantığını tasarladım, veri odaklı kararlar için full-stack arayüz geliştirdim.</p>
+            <div class="chips">
+              <span class="chip">full-stack</span>
+              <span class="chip">node.js</span>
+              <span class="chip">express.js</span>
+              <span class="chip">chart.js</span>
+              <span class="chip">leaflet.js</span>
+              <span class="chip">veri tabanı tasarımı</span>
+              <span class="chip">sistem analizi</span>
+            </div>
+            <a class="more" href="https://github.com/yusufesen1/izmir_kds" target="_blank" rel="noopener">github'da gör ↗</a>
+          </div>
+        </article>
+
+        <article class="project" data-project>
+          <div class="year">eki 2025</div>
+          <div>
+            <div class="title">historical digital twin of milano <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">mekansal web · hikaye anlatımı</div>
+          <div class="body">
+            <p>kişisel deneyimi teknik uygulamayla birleştiren mekansal bir web çalışması — figma'da tasarladım, hugo ile geliştirdim. mekan üzerinden hikaye anlatmaya odaklı.</p>
+            <div class="chips">
+              <span class="chip">figma</span>
+              <span class="chip">hugo</span>
+              <span class="chip">hikaye anlatımı</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-project>
+          <div class="year">tem — eki 2025</div>
+          <div>
+            <div class="title">web developer intern · university of pavia <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">framework çalışması · robotik laboratuvarı</div>
+          <div class="body">
+            <p>laboratuvarın web framework'ü olan hugo ile çalıştım — go diliyle yazılmış statik site üreticisi. ui/ux akışları tasarladım, ön yüz arayüzleri geliştirdim. partner şirketler için gerçek projelere katkı verdim.</p>
+            <div class="chips">
+              <span class="chip">hugo</span>
+              <span class="chip">go</span>
+              <span class="chip">html</span>
+              <span class="chip">css</span>
+              <span class="chip">javascript</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-project>
+          <div class="year">may 2025</div>
+          <div>
+            <div class="title">raspberry pi hava kalitesi sistemi <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">iot · python</div>
+          <div class="body">
+            <p>raspberry pi 3 üzerine hava kalitesi, sıcaklık, nem ve basınç ölçen bir donanım sistemi kurdum. sensör katmanını python ile programladım.</p>
+            <div class="chips">
+              <span class="chip">raspberry pi</span>
+              <span class="chip">python</span>
+              <span class="chip">sensörler</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" id="contact">
+      <h2 class="section-title">iletişim</h2>
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form">
+          <label class="field">
+            <span class="field-label">isim</span>
+            <input name="name" type="text" placeholder="adınız" required />
+          </label>
+          <label class="field">
+            <span class="field-label">e-posta</span>
+            <input name="email" type="email" placeholder="email@ornek.com" required />
+          </label>
+          <label class="field">
+            <span class="field-label">mesaj</span>
+            <textarea name="message" rows="4" placeholder="ne düşünüyorsunuz?" required></textarea>
+          </label>
+          <button class="send-btn" type="submit" id="send-btn">mesaj gönder <span class="arrow">→</span></button>
+        </form>
+        <aside class="contact-side">
+          <div class="contact-label">doğrudan ulaş</div>
+          <a class="contact-mail preserve-case" href="mailto:yusufmiraz04@gmail.com">yusufmiraz04@gmail.com</a>
+          <div class="contact-socials">
+            <a class="btn" href="https://github.com/yusufesen1" target="_blank" rel="noopener">github <span class="arrow">↗</span></a>
+            <a class="btn" href="https://www.linkedin.com/in/yusufmesen/" target="_blank" rel="noopener">linkedin <span class="arrow">↗</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="tail" style="display:none"></div>
+  </main>
+
+  <footer class="site-footer">
+    <span class="copyright-mark">c</span>
+    <span class="copyright-text preserve-case">2026 yusuf mıraz esen. all rights reserved.</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // ── EmailJS ──────────────────────────────────────────────
+    const EMAILJS_PUBLIC_KEY  = 'RPG7LtTULo1in5-GP';
+    const EMAILJS_SERVICE_ID  = 'service_cd4gdt9';
+    const EMAILJS_TEMPLATE_ID = 'template_45jisfo';
+
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = document.getElementById('send-btn');
+      btn.disabled = true;
+      btn.textContent = 'gönderiliyor…';
+
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+        .then(() => {
+          btn.textContent = 'gönderildi ✓';
+          this.reset();
+          setTimeout(() => {
+            btn.disabled = false;
+            btn.innerHTML = 'mesaj gönder <span class="arrow">→</span>';
+          }, 3000);
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btn.innerHTML = 'mesaj gönder <span class="arrow">→</span>';
+          alert('bir hata oluştu — doğrudan e-posta atmayı dene.');
+        });
+    });
+    // ─────────────────────────────────────────────────────────
+
+    // typewriter
+    (function () {
+      const el = document.querySelector('.motto');
+      const text = el.textContent.trim();
+      el.textContent = '';
+      const t = document.createElement('span');
+      const c = document.createElement('span');
+      c.className = 'motto-cursor';
+      el.appendChild(t);
+      el.appendChild(c);
+      let i = 0;
+      function step() {
+        if (i < text.length) { t.textContent += text[i++]; setTimeout(step, 90); }
+        else { setTimeout(() => c.classList.add('done'), 900); }
+      }
+      setTimeout(step, 250);
+    })();
+
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+      if (window.scrollY > 12) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    document.querySelectorAll('[data-project]').forEach(p => {
+      p.addEventListener('click', () => p.classList.toggle('open'));
+    });
+  </script>
+</body>
+</html>
