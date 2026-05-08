@@ -631,6 +631,13 @@ section {
   .project .meta { grid-column: 2; }
   .project .body { grid-column: 1 / -1; }
 
+  /* lang pill */
+  .lang { font-size: 11px; padding: 3px 4px; }
+  .lang a { padding: 2px 6px; }
+
+  /* remove hover indent so project title width is stable on touch */
+  .project:hover { padding-left: 0; background: none; }
+
   /* contact */
   .send-btn { width: 100%; }
   .contact-mail { font-size: 18px; }
