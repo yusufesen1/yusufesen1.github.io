@@ -19,11 +19,10 @@
       <a href="#top" class="logo" aria-label="yusuf mıraz esen — anasayfa">
         <img src="assets/yme_logo.png" alt="yme logo" />
       </a>
-      <nav class="lang" aria-label="dil">
-        <a href="tr.html" class="active">tr</a>
-        <span class="sep">/</span>
-        <a href="index.html">eng</a>
-      </nav>
+      <a href="index.html" class="lang" aria-label="dili i̇ngilizceye çevir">
+        <span class="lang-option active">tr</span>
+        <span class="lang-option">eng</span>
+      </a>
     </div>
   </header>
 
@@ -44,14 +43,14 @@
     <!-- about -->
     <section class="section-block about" id="about">
       <div class="about-hero">
-        <h2 class="section-title">hakkımda</h2>
         <div class="about-grid">
           <figure class="photo">
             <img src="assets/yusuf.jpeg" alt="yusuf mıraz esen" />
           </figure>
           <div class="about-text">
+            <h2 class="section-title">hakkımda</h2>
             <p>
-              ben yusuf mıraz esen, dokuz eylül üniversitesi yönetim bilişim sistemleri öğrencisiyim. backend geliştirme, sistem analizi ve veri odaklı uygulamalar üzerine çalışıyorum. crm sistemleri, karar destek dashboard'ları, cbs tabanlı uygulamalar ve gömülü donanım projeleri geliştirdim. çalışmalarım çoğunlukla node.js, python ve ilişkisel veritabanları etrafında dönüyor.
+              ben yusuf mıraz esen, dokuz eylül üniversitesi yönetim bilişim sistemleri öğrencisiyim. backend geliştirme, sistem analizi ve veri odaklı uygulamalar üzerine çalışıyorum — son zamanlarda uygulamalı yapay zeka ve karar destek sistemlerine giderek daha fazla odaklanıyorum. crm sistemleri, karar destek dashboard'ları, cbs tabanlı uygulamalar ve gömülü donanım projeleri geliştirdim. çalışmalarım çoğunlukla node.js, python, ilişkisel veritabanları ve üretken yapay zeka etrafında şekilleniyor.
             </p>
             <div class="about-actions">
               <a class="btn primary" href="assets/YusufMirazESEN-TR.pdf" target="_blank" rel="noopener" download>
@@ -70,9 +69,9 @@
       <div class="about-story">
         <h3 class="story-subtitle">hikayem</h3>
         <div class="story-text">
-          <p>sistemlerin nasıl çalıştığını anlamayı seviyorum. sadece çalışıyor olmasının pek bir şey ifade etmediğini de zamanla öğrendim. çoğu zaman işin içinde node.js, python, veritabanı ve arada bir haritalar oluyor. şehir içi ulaşım için dashboard'lar, gerçek iş problemleri için backend sistemleri, çevresel veriler için harita tabanlı araçlar yazdım — bir ara raspberry pi'a da bulaştım, çünkü görünüşe göre sadece kod yazmak yeterli gelmemişti.</p>
+          <p>sistemlerin nasıl çalıştığını anlamayı seviyorum. zamanla, ortaya çıkan şey kadar onun nasıl çalıştığının da önemli olduğunu fark ettim. çoğu zaman işin içinde node.js, python, veritabanı ve arada bir haritalar oluyor. şehir içi ulaşım için dashboard'lar, gerçek iş problemleri için backend sistemleri, çevresel veriler için harita tabanlı araçlar ve karar vermeyi destekleyen veri odaklı uygulamalar geliştirdim. son dönemde ise yapay zekayı bu sistemlerin içine nasıl anlamlı şekilde dahil edebileceğime odaklanıyorum. bir ara raspberry pi'a da bulaştım çünkü sadece kod yazmak yeterli gelmemişti.</p>
           <p>zamanla şuna ikna oldum: "çalışan kod" ile "düzgün kurulmuş sistem" tamamen ayrı iki tür ve ben hâlâ ikisini ayırt etmeyi öğreniyorum.</p>
-          <p>burası da inşa ettiğim, bozduğum, baştan yazdığım ve ara sıra ilk denemede tutturduğum (nadir oluyor ama oluyor) şeyleri biriktirdiğim yer. takılın biraz — kurcalanmaya değecek bir şey çıkar büyük ihtimalle.</p>
+          <p>burası da inşa ettiğim, bozduğum, baştan yazdığım ve ara sıra ilk denemede tutturduğum (nadir oluyor ama oluyor) şeyleri biriktirdiğim yer. takılın biraz — büyük ihtimalle kurcalanmaya değecek bir şey çıkar.</p>
         </div>
       </div>
     </section>
@@ -81,6 +80,28 @@
       <h2 class="section-title">projeler</h2>
       <div class="projects-list">
         <div class="year-group-label">2026</div>
+        <article class="project" data-project>
+          <div class="year">may 2026</div>
+          <div>
+            <div class="title">kocaeli kentsel ısı adası analizi <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">cbs · uzaktan algılama · kentsel analiz</div>
+          <div class="body">
+            <p>gebze'de sanayileşmenin kentsel ısı adası etkisi üzerine landsat 8/9 uydu görüntüleri ve qgis kullanarak bir analiz oluşturdum. lst, ndvi ve ndbi haritalarını ürettim, 2016-2025 dönemi değişimini hexagonal grid yapısı üzerinden karşılaştırdım ve sonuçları etkileşimli bir web haritasına dönüştürdüm.</p>
+            <div class="chips">
+              <span class="chip">landsat 8/9</span>
+              <span class="chip">qgis</span>
+              <span class="chip">lst</span>
+              <span class="chip">ndvi</span>
+              <span class="chip">ndbi</span>
+              <span class="chip">hexagonal grid</span>
+              <span class="chip">interaktif harita</span>
+            </div>
+            <a class="more" href="https://yusufesen1.github.io/kocaeli_lst/" target="_blank" rel="noopener">canlı sürümü gör ↗</a>
+            <a class="more" href="https://github.com/yusufesen1/kocaeli_lst" target="_blank" rel="noopener">github'da gör ↗</a>
+          </div>
+        </article>
+
         <article class="project" data-project>
           <div class="year">may 2026</div>
           <div>
@@ -147,7 +168,7 @@
           </div>
           <div class="meta">backend · node.js</div>
           <div class="body">
-            <p>fabrika ile bayiler arası sipariş yönetimini dijitalleştiren bir crm sistemi geliştirdim. backend mimarisini tasarladım, stok ve satış akışlarını kapsadım. dört kişilik takım.</p>
+            <p>fabrika ile bayiler arası sipariş yönetimini dijitalleştiren bir crm sistemi geliştirdim. backend mimarisini tasarladım, stok ve satış akışlarını entegre ettim. dört kişilik takım.</p>
             <div class="chips">
               <span class="chip">node.js</span>
               <span class="chip">crm</span>
@@ -173,22 +194,6 @@
               <span class="chip">interaktif harita</span>
               <span class="chip">gerçek zamanlı veri</span>
               <span class="chip">3.lük</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <div class="year">eki 2025</div>
-          <div>
-            <div class="title">historical digital twin of milano <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">mekansal web · hikaye anlatımı</div>
-          <div class="body">
-            <p>kişisel deneyimi teknik uygulamayla birleştiren mekansal bir web çalışması — figma'da tasarladım, hugo ile geliştirdim. mekan üzerinden hikaye anlatmaya odaklı.</p>
-            <div class="chips">
-              <span class="chip">figma</span>
-              <span class="chip">hugo</span>
-              <span class="chip">hikaye anlatımı</span>
             </div>
           </div>
         </article>
@@ -317,7 +322,7 @@
       el.appendChild(c);
       let i = 0;
       function step() {
-        if (i < text.length) { t.textContent += text[i++]; setTimeout(step, 90); }
+        if (i < text.length) { t.textContent += text[i++]; setTimeout(step, 100); }
         else { setTimeout(() => c.classList.add('done'), 900); }
       }
       setTimeout(step, 250);

@@ -19,11 +19,10 @@
       <a href="#top" class="logo" aria-label="yusuf mıraz esen — home">
         <img src="assets/yme_logo.png" alt="yme logo" />
       </a>
-      <nav class="lang" aria-label="language">
-        <a href="tr.html">tr</a>
-        <span class="sep">/</span>
-        <a href="index.html" class="active">eng</a>
-      </nav>
+      <a href="tr.html" class="lang" aria-label="switch language to turkish">
+        <span class="lang-option">tr</span>
+        <span class="lang-option active">eng</span>
+      </a>
     </div>
   </header>
 
@@ -44,14 +43,14 @@
     <!-- about -->
     <section class="section-block about" id="about">
       <div class="about-hero">
-        <h2 class="section-title">about</h2>
         <div class="about-grid">
           <figure class="photo">
             <img src="assets/yusuf.jpeg" alt="yusuf mıraz esen" />
           </figure>
           <div class="about-text">
+            <h2 class="section-title">about</h2>
             <p>
-              i am yusuf mıraz esen, a management information systems student at dokuz eylül university. i work on backend development, system analysis, and data-driven applications. i've built crm systems, decision support dashboards, gis-based applications, and embedded hardware projects. my work mostly revolves around node.js, python and relational databases.
+              i am yusuf mıraz esen, a management information systems student at dokuz eylül university. i work on backend development, system analysis, and data-driven applications — lately with a growing focus on applied ai and decision support systems. i've built crm systems, decision support dashboards, gis-based applications, and embedded hardware projects. my work mostly revolves around node.js, python, relational databases and generative ai.
             </p>
             <div class="about-actions">
               <a class="btn primary" href="assets/YusufMirazESEN.pdf" target="_blank" rel="noopener" download>
@@ -70,9 +69,9 @@
       <div class="about-story">
         <h3 class="story-subtitle">my story</h3>
         <div class="story-text">
-          <p>i like figuring out how systems are wired, where the data goes sideways and why "it works on my machine" is almost never the full story. most of the time that means node.js, python, a database that's having a bad day, and the occasional map. i've built dashboards for urban transportation, backends for real business problems nobody warned me about, and geospatial tools for environmental data — and somewhere along the way i also wired up a raspberry pi, because apparently breaking things in software wasn't enough.</p>
-          <p>over time i've come to suspect that "working code" and "well-thought-out systems" are two very different animals and i'm slowly learning to tell them apart.</p>
-          <p>this site is where i keep the things i've built, broken, rebuilt and occasionally gotten right on the first try (rare, but it happens). stick around — there's probably something here worth poking at.</p>
+          <p>i like figuring out how systems work. over time i've realized that how something works matters as much as what it produces. most of the time that means node.js, python, a database and the occasional map. i've built dashboards for urban transportation, backends for real business problems, map-based tools for environmental data and data-driven applications that support decision-making. lately i've been focused on figuring out how to meaningfully fold ai into these systems. somewhere along the way i also got into raspberry pi because apparently writing code wasn't enough.</p>
+          <p>over time i've become convinced that "working code" and "well-built systems" are two entirely different animals, and i'm still learning to tell them apart.</p>
+          <p>this site is where i keep the things i've built, broken, rebuilt, and occasionally gotten right on the first try (rare, but it happens). stick around — there's probably something here worth poking at.</p>
         </div>
       </div>
     </section>
@@ -82,6 +81,28 @@
       <h2 class="section-title">projects</h2>
       <div class="projects-list">
         <div class="year-group-label">2026</div>
+        <article class="project" data-project>
+          <div class="year">may 2026</div>
+          <div>
+            <div class="title">kocaeli urban heat island analysis <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">gis · remote sensing · urban analysis</div>
+          <div class="body">
+            <p>created an analysis on the urban heat island effect of industrialization in gebze using landsat 8/9 satellite imagery and qgis. produced lst, ndvi and ndbi maps, compared the 2016–2025 change across a hexagonal grid structure and turned the results into an interactive web map.</p>
+            <div class="chips">
+              <span class="chip">landsat 8/9</span>
+              <span class="chip">qgis</span>
+              <span class="chip">lst</span>
+              <span class="chip">ndvi</span>
+              <span class="chip">ndbi</span>
+              <span class="chip">hexagonal grid</span>
+              <span class="chip">interactive web map</span>
+            </div>
+            <a class="more" href="https://yusufesen1.github.io/kocaeli_lst/" target="_blank" rel="noopener">view live ↗</a>
+            <a class="more" href="https://github.com/yusufesen1/kocaeli_lst" target="_blank" rel="noopener">view on github ↗</a>
+          </div>
+        </article>
+
         <article class="project" data-project>
           <div class="year">may 2026</div>
           <div>
@@ -174,22 +195,6 @@
               <span class="chip">interactive maps</span>
               <span class="chip">real-time data</span>
               <span class="chip">3rd place</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <div class="year">oct 2025</div>
-          <div>
-            <div class="title">historical digital twin of milano <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">spatial web · storytelling</div>
-          <div class="body">
-            <p>a spatial web piece combining personal experience with technical implementation — designed in figma, developed with hugo. focused on storytelling through place.</p>
-            <div class="chips">
-              <span class="chip">figma</span>
-              <span class="chip">hugo</span>
-              <span class="chip">storytelling</span>
             </div>
           </div>
         </article>
@@ -318,7 +323,7 @@
       el.appendChild(c);
       let i = 0;
       function step() {
-        if (i < text.length) { t.textContent += text[i++]; setTimeout(step, 90); }
+        if (i < text.length) { t.textContent += text[i++]; setTimeout(step, 100); }
         else { setTimeout(() => c.classList.add('done'), 900); }
       }
       setTimeout(step, 250);

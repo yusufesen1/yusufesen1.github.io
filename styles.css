@@ -97,20 +97,27 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
 .lang {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   letter-spacing: 0.04em;
   color: var(--muted);
   border: 1px solid #333;
   border-radius: 999px;
-  padding: 4px 6px;
+  padding: 2px;
+  transition: border-color 0.2s ease;
 }
+.lang:hover { border-color: #ededed; }
 
-.lang a { padding: 3px 8px; border-radius: 999px; transition: color 0.2s ease, background 0.2s ease; }
-.lang a.active { color: #0a0a0a; background: #ededed; }
-.lang a:hover { color: var(--hover); }
-.lang .sep { display: none; }
+.lang-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+.lang-option.active { color: #0a0a0a; background: #ededed; }
 
 /* ---------- layout ---------- */
 main { position: relative; z-index: 1; }
@@ -135,7 +142,7 @@ section {
 
 .motto {
   font-family: 'Roboto', sans-serif;
-  font-size: clamp(44px, 7vw, 96px);
+  font-size: clamp(34px, 5.3vw, 72px);
   font-weight: 400;
   line-height: 1.02;
   letter-spacing: -0.035em;
@@ -168,7 +175,7 @@ section {
 .section-title {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-size: clamp(36px, 4.5vw, 56px);
+  font-size: clamp(30px, 3.8vw, 47px);
   font-weight: 500;
   margin-bottom: 40px;
   letter-spacing: -0.03em;
@@ -191,7 +198,7 @@ section {
   align-items: center;
   gap: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--muted);
 }
@@ -252,8 +259,10 @@ section {
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 48px;
-  align-items: start;
+  align-items: center;
 }
+
+.about-text .section-title { margin-bottom: 24px; }
 
 .photo {
   aspect-ratio: 1 / 1;
@@ -429,6 +438,7 @@ section {
   transition: border-color 0.2s ease;
 }
 .project .body .more:hover { border-color: #ededed; }
+.project .body .more + .more { margin-left: 16px; }
 .project.open .arrow { transform: rotate(90deg) translateX(0); opacity: 1; }
 
 .year-group-label {
@@ -634,7 +644,7 @@ section {
 
   /* lang pill */
   .lang { font-size: 11px; padding: 3px 4px; }
-  .lang a { padding: 2px 6px; }
+  .lang-option { padding: 2px 6px; }
 
   /* remove hover indent so project title width is stable on touch */
   .project:hover { padding-left: 0; background: none; }
