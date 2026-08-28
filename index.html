@@ -19,10 +19,11 @@
       <a href="#top" class="logo" aria-label="yusuf mıraz esen — home">
         <img src="assets/yme_logo.png" alt="yme logo" />
       </a>
-      <a href="tr.html" class="lang" aria-label="switch language to turkish">
-        <span class="lang-option">tr</span>
-        <span class="lang-option active">eng</span>
-      </a>
+      <button type="button" class="lang" id="lang-toggle" aria-label="switch language to turkish">
+        <span class="lang-option" id="lang-option-tr">tr</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-option active" id="lang-option-eng">eng</span>
+      </button>
     </div>
   </header>
 
@@ -30,13 +31,13 @@
     <!-- hero -->
     <section class="hero">
       <h1 class="motto">i built to understand.</h1>
-      <p class="intro">
+      <p class="intro" id="hero-intro">
         hey! it's yusuf mıraz, a management information systems student based in turkey. if you want to know about me please scroll the page.
       </p>
       <nav class="hero-nav" aria-label="page sections">
-        <a href="#about">about</a>
-        <a href="#projects">projects</a>
-        <a href="#contact">contact</a>
+        <a href="#about" id="hero-about-link">about</a>
+        <a href="#projects" id="hero-projects-link">projects</a>
+        <a href="#contact" id="hero-contact-link">contact</a>
       </nav>
     </section>
 
@@ -48,13 +49,13 @@
             <img src="assets/yusuf.jpeg" alt="yusuf mıraz esen" />
           </figure>
           <div class="about-text">
-            <h2 class="section-title">about</h2>
-            <p>
+            <h2 class="section-title" id="about-title">about</h2>
+            <p id="about-body">
               i am yusuf mıraz esen, a management information systems student at dokuz eylül university. i work on backend development, system analysis, and data-driven applications — lately with a growing focus on applied ai and decision support systems. i've built crm systems, decision support dashboards, gis-based applications, and embedded hardware projects. my work mostly revolves around node.js, python, relational databases and generative ai.
             </p>
             <div class="about-actions">
-              <a class="btn primary" href="assets/YusufMirazESEN.pdf" target="_blank" rel="noopener" download>
-                download the cv <span class="arrow">↓</span>
+              <a class="btn primary" id="cv-link" href="assets/YusufMirazESEN.pdf" target="_blank" rel="noopener" download>
+                <span id="cv-link-label">download the cv</span> <span class="arrow">↓</span>
               </a>
               <a class="btn" href="https://www.linkedin.com/in/yusufmesen/" target="_blank" rel="noopener">
                 linkedin <span class="arrow">↗</span>
@@ -67,8 +68,8 @@
         </div>
       </div>
       <div class="about-story">
-        <h3 class="story-subtitle">my story</h3>
-        <div class="story-text">
+        <h3 class="story-subtitle" id="story-title">my story</h3>
+        <div class="story-text" id="story-text">
           <p>i like figuring out how systems work. over time i've realized that how something works matters as much as what it produces. most of the time that means node.js, python, a database and the occasional map. i've built dashboards for urban transportation, backends for real business problems, map-based tools for environmental data and data-driven applications that support decision-making. lately i've been focused on figuring out how to meaningfully fold ai into these systems. somewhere along the way i also got into raspberry pi because apparently writing code wasn't enough.</p>
           <p>over time i've become convinced that "working code" and "well-built systems" are two entirely different animals, and i'm still learning to tell them apart.</p>
           <p>this site is where i keep the things i've built, broken, rebuilt, and occasionally gotten right on the first try (rare, but it happens). stick around — there's probably something here worth poking at.</p>
@@ -78,184 +79,30 @@
 
     <!-- placeholders for next sections -->
     <section class="section-block" id="projects">
-      <h2 class="section-title">projects</h2>
-      <div class="projects-list">
-        <div class="year-group-label">2026</div>
-        <article class="project" data-project>
-          <div class="year">may 2026</div>
-          <div>
-            <div class="title">kocaeli urban heat island analysis <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">gis · remote sensing · urban analysis</div>
-          <div class="body">
-            <p>created an analysis on the urban heat island effect of industrialization in gebze using landsat 8/9 satellite imagery and qgis. produced lst, ndvi and ndbi maps, compared the 2016–2025 change across a hexagonal grid structure and turned the results into an interactive web map.</p>
-            <div class="chips">
-              <span class="chip">landsat 8/9</span>
-              <span class="chip">qgis</span>
-              <span class="chip">lst</span>
-              <span class="chip">ndvi</span>
-              <span class="chip">ndbi</span>
-              <span class="chip">hexagonal grid</span>
-              <span class="chip">interactive web map</span>
-            </div>
-            <a class="more" href="https://yusufesen1.github.io/kocaeli_lst/" target="_blank" rel="noopener">view live ↗</a>
-            <a class="more" href="https://github.com/yusufesen1/kocaeli_lst" target="_blank" rel="noopener">view on github ↗</a>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <div class="year">may 2026</div>
-          <div>
-            <div class="title">milano building detection <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">deep learning · u-net</div>
-          <div class="body">
-            <p>trained a u-net model to detect building footprints from sentinel-2 satellite imagery over via luca ghini, milan — the neighborhood where i lived during my erasmus exchange. reached <span class="preserve-case">85.1%</span> mean iou, a research-grade level in academic literature.</p>
-            <div class="chips">
-              <span class="chip">python</span>
-              <span class="chip">pytorch</span>
-              <span class="chip">u-net · 31m params</span>
-              <span class="chip">sentinel-2</span>
-              <span class="chip">overture maps</span>
-              <span class="chip">colab · t4 gpu</span>
-            </div>
-            <a class="more" href="https://github.com/yusufesen1/gis-deeplearning-milano" target="_blank" rel="noopener">view on github ↗</a>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <div class="year">apr 2026</div>
-          <div>
-            <div class="title">paribu code night <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">blockchain · competition</div>
-          <div class="body">
-            <p>paribu-sponsored hackathon where teams were given real blockchain data and tasked with training a model and writing a trading algorithm to maximize earnings. the algorithm was simulated across all teams.</p>
-            <div class="chips">
-              <span class="chip">blockchain</span>
-              <span class="chip">algorithm design</span>
-              <span class="chip">data modeling</span>
-            </div>
-            <a class="more" href="https://github.com/yusufesen1/takim10_MIStrio" target="_blank" rel="noopener">view on github ↗</a>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <div class="year">jan 2026</div>
-          <div>
-            <div class="title">route35 — decision support<br class="title-br"> system <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">full-stack · gis · dashboard</div>
-          <div class="body">
-            <p>management dashboard analyzing public transportation flows in izmir. integrated metro, tram and bus datasets, designed the database architecture and system logic, built a full-stack interface for data-driven decisions.</p>
-            <div class="chips">
-              <span class="chip">full-stack</span>
-              <span class="chip">node.js</span>
-              <span class="chip">express.js</span>
-              <span class="chip">chart.js</span>
-              <span class="chip">leaflet.js</span>
-              <span class="chip">database design</span>
-              <span class="chip">system analysis</span>
-            </div>
-            <a class="more" href="https://github.com/yusufesen1/izmir_kds" target="_blank" rel="noopener">view on github ↗</a>
-          </div>
-        </article>
-
-        <div class="year-group-label">2025</div>
-        <article class="project" data-project>
-          <div class="year">dec 2025</div>
-          <div>
-            <div class="title">digital order bridge <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">backend · node.js</div>
-          <div class="body">
-            <p>built a crm system to digitalize order management between a factory and its distributors. designed the backend architecture, covered inventory and sales workflows, worked in a team of four.</p>
-            <div class="chips">
-              <span class="chip">node.js</span>
-              <span class="chip">crm</span>
-              <span class="chip">backend architecture</span>
-              <span class="chip">team of 4</span>
-            </div>
-            <a class="more" href="https://github.com/yusufesen1/dijital-siparis-koprusu" target="_blank" rel="noopener">view on github ↗</a>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <div class="year">nov 2025</div>
-          <div>
-            <div class="title">blue twin <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">gis · hackathon · 3rd place</div>
-          <div class="body">
-            <p>web-based monitoring system for water pollution across izmir. built interactive map visualizations using real-time geospatial data, focused on environmental data representation and accessibility. team of four.</p>
-            <div class="chips">
-              <span class="chip">gis</span>
-              <span class="chip">qgis</span>
-              <span class="chip">google earth</span>
-              <span class="chip">interactive maps</span>
-              <span class="chip">real-time data</span>
-              <span class="chip">3rd place</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <div class="year">jul — oct 2025</div>
-          <div>
-            <div class="title">web developer intern · university of pavia <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">framework work · robotics lab</div>
-          <div class="body">
-            <p>worked on the lab's web framework — hugo, a static site generator written in go — designing ui/ux flows and developing front-end interfaces. contributed to real-world projects for partner companies.</p>
-            <div class="chips">
-              <span class="chip">hugo</span>
-              <span class="chip">go</span>
-              <span class="chip">html</span>
-              <span class="chip">css</span>
-              <span class="chip">javascript</span>
-            </div>
-            <a class="more" href="assets/Erasmus%20Certificate.pdf" target="_blank" rel="noopener">view certificate ↗</a>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <div class="year">may 2025</div>
-          <div>
-            <div class="title">raspberry pi air quality system <span class="arrow">→</span></div>
-          </div>
-          <div class="meta">iot · python</div>
-          <div class="body">
-            <p>built a hardware system on raspberry pi 3 measuring air quality, temperature, humidity and pressure. programmed the sensor stack in python.</p>
-            <div class="chips">
-              <span class="chip">raspberry pi</span>
-              <span class="chip">python</span>
-              <span class="chip">sensors</span>
-            </div>
-          </div>
-        </article>
-      </div>
+      <h2 class="section-title" id="projects-title">projects</h2>
+      <div class="projects-list" id="projects-list"></div>
     </section>
 
     <section class="section-block" id="contact">
-      <h2 class="section-title">contact</h2>
+      <h2 class="section-title" id="contact-title">contact</h2>
       <div class="contact-grid">
         <form class="contact-form" id="contact-form">
           <label class="field">
-            <span class="field-label">name</span>
-            <input name="name" type="text" placeholder="your name" required />
+            <span class="field-label" id="name-label">name</span>
+            <input id="name-input" name="name" type="text" placeholder="your name" required />
           </label>
           <label class="field">
-            <span class="field-label">e-mail</span>
-            <input name="email" type="email" placeholder="email@example.com" required />
+            <span class="field-label" id="email-label">e-mail</span>
+            <input id="email-input" name="email" type="email" placeholder="email@example.com" required />
           </label>
           <label class="field">
-            <span class="field-label">message</span>
-            <textarea name="message" rows="4" placeholder="what's on your mind?" required></textarea>
+            <span class="field-label" id="message-label">message</span>
+            <textarea id="message-input" name="message" rows="4" placeholder="what's on your mind?" required></textarea>
           </label>
-          <button class="send-btn" type="submit" id="send-btn">send message <span class="arrow">→</span></button>
+          <button class="send-btn" type="submit" id="send-btn"><span id="send-label">send message</span> <span class="arrow">→</span></button>
         </form>
         <aside class="contact-side">
-          <div class="contact-label">drop a line directly</div>
+          <div class="contact-label" id="contact-drop-label">drop a line directly</div>
           <a class="contact-mail preserve-case" href="mailto:yusufmiraz04@gmail.com">yusufmiraz04@gmail.com</a>
           <div class="contact-socials">
             <a class="btn" href="https://github.com/yusufesen1" target="_blank" rel="noopener">github <span class="arrow">↗</span></a>
@@ -275,6 +122,287 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
+    // ── i18n content ─────────────────────────────────────────
+    const translations = {
+      en: {
+        htmlLang: 'en',
+        screenLabel: '01 Home (EN)',
+        nav: { logoAria: 'yusuf mıraz esen — home', sections: { about: 'about', projects: 'projects', contact: 'contact' } },
+        hero: {
+          navAria: 'page sections',
+          intro: "hey! it's yusuf mıraz, a management information systems student based in turkey. if you want to know about me please scroll the page."
+        },
+        about: {
+          title: 'about',
+          body: "i am yusuf mıraz esen, a management information systems student at dokuz eylül university. i work on backend development, system analysis, and data-driven applications — lately with a growing focus on applied ai and decision support systems. i've built crm systems, decision support dashboards, gis-based applications, and embedded hardware projects. my work mostly revolves around node.js, python, relational databases and generative ai.",
+          cvLabel: 'download the cv',
+          cvHref: 'assets/YusufMirazESEN.pdf'
+        },
+        story: {
+          title: 'my story',
+          paragraphs: [
+            "i like figuring out how systems work. over time i've realized that how something works matters as much as what it produces. most of the time that means node.js, python, a database and the occasional map. i've built dashboards for urban transportation, backends for real business problems, map-based tools for environmental data and data-driven applications that support decision-making. lately i've been focused on figuring out how to meaningfully fold ai into these systems. somewhere along the way i also got into raspberry pi because apparently writing code wasn't enough.",
+            `over time i've become convinced that "working code" and "well-built systems" are two entirely different animals, and i'm still learning to tell them apart.`,
+            "this site is where i keep the things i've built, broken, rebuilt, and occasionally gotten right on the first try (rare, but it happens). stick around — there's probably something here worth poking at."
+          ]
+        },
+        projectsTitle: 'projects',
+        projects: [
+          {
+            yearGroup: '2026', year: 'may 2026', title: 'kocaeli urban heat island analysis',
+            meta: 'gis · remote sensing · urban analysis',
+            body: `<p>created an analysis on the urban heat island effect of industrialization in gebze using landsat 8/9 satellite imagery and qgis. produced lst, ndvi and ndbi maps, compared the 2016–2025 change across a hexagonal grid structure and turned the results into an interactive web map.</p>`,
+            chips: ['landsat 8/9', 'qgis', 'lst', 'ndvi', 'ndbi', 'hexagonal grid', 'interactive web map'],
+            links: [
+              { href: 'https://yusufesen1.github.io/kocaeli_lst/', text: 'view live ↗' },
+              { href: 'https://github.com/yusufesen1/kocaeli_lst', text: 'view on github ↗' }
+            ]
+          },
+          {
+            year: 'may 2026', title: 'milano building detection',
+            meta: 'deep learning · u-net',
+            body: `<p>trained a u-net model to detect building footprints from sentinel-2 satellite imagery over via luca ghini, milan — the neighborhood where i lived during my erasmus exchange. reached <span class="preserve-case">85.1%</span> mean iou, a research-grade level in academic literature.</p>`,
+            chips: ['python', 'pytorch', 'u-net · 31m params', 'sentinel-2', 'overture maps', 'colab · t4 gpu'],
+            links: [{ href: 'https://github.com/yusufesen1/gis-deeplearning-milano', text: 'view on github ↗' }]
+          },
+          {
+            year: 'apr 2026', title: 'paribu code night',
+            meta: 'blockchain · competition',
+            body: `<p>paribu-sponsored hackathon where teams were given real blockchain data and tasked with training a model and writing a trading algorithm to maximize earnings. the algorithm was simulated across all teams.</p>`,
+            chips: ['blockchain', 'algorithm design', 'data modeling'],
+            links: [{ href: 'https://github.com/yusufesen1/takim10_MIStrio', text: 'view on github ↗' }]
+          },
+          {
+            year: 'jan 2026', titleHtml: 'route35 — decision support<br class="title-br"> system',
+            meta: 'full-stack · gis · dashboard',
+            body: `<p>management dashboard analyzing public transportation flows in izmir. integrated metro, tram and bus datasets, designed the database architecture and system logic, built a full-stack interface for data-driven decisions.</p>`,
+            chips: ['full-stack', 'node.js', 'express.js', 'chart.js', 'leaflet.js', 'database design', 'system analysis'],
+            links: [{ href: 'https://github.com/yusufesen1/izmir_kds', text: 'view on github ↗' }]
+          },
+          {
+            yearGroup: '2025', year: 'dec 2025', title: 'digital order bridge',
+            meta: 'backend · node.js',
+            body: `<p>built a crm system to digitalize order management between a factory and its distributors. designed the backend architecture, covered inventory and sales workflows, worked in a team of four.</p>`,
+            chips: ['node.js', 'crm', 'backend architecture', 'team of 4'],
+            links: [{ href: 'https://github.com/yusufesen1/dijital-siparis-koprusu', text: 'view on github ↗' }]
+          },
+          {
+            year: 'nov 2025', title: 'blue twin',
+            meta: 'gis · hackathon · 3rd place',
+            body: `<p>web-based monitoring system for water pollution across izmir. built interactive map visualizations using real-time geospatial data, focused on environmental data representation and accessibility. team of four.</p>`,
+            chips: ['gis', 'qgis', 'google earth', 'interactive maps', 'real-time data', '3rd place'],
+            links: []
+          },
+          {
+            year: 'jul — oct 2025', title: 'web developer intern · university of pavia',
+            meta: 'framework work · robotics lab',
+            body: `<p>worked on the lab's web framework — hugo, a static site generator written in go — designing ui/ux flows and developing front-end interfaces. contributed to real-world projects for partner companies.</p>`,
+            chips: ['hugo', 'go', 'html', 'css', 'javascript'],
+            links: [{ href: 'assets/Erasmus%20Certificate.pdf', text: 'view certificate ↗' }]
+          },
+          {
+            year: 'may 2025', title: 'raspberry pi air quality system',
+            meta: 'iot · python',
+            body: `<p>built a hardware system on raspberry pi 3 measuring air quality, temperature, humidity and pressure. programmed the sensor stack in python.</p>`,
+            chips: ['raspberry pi', 'python', 'sensors'],
+            links: []
+          }
+        ],
+        contact: {
+          title: 'contact',
+          nameLabel: 'name', namePlaceholder: 'your name',
+          emailLabel: 'e-mail', emailPlaceholder: 'email@example.com',
+          messageLabel: 'message', messagePlaceholder: "what's on your mind?",
+          send: 'send message', sending: 'sending…', sent: 'sent ✓',
+          error: 'something went wrong — try emailing directly.',
+          dropLine: 'drop a line directly'
+        }
+      },
+      tr: {
+        htmlLang: 'tr',
+        screenLabel: '01 Anasayfa (TR)',
+        nav: { logoAria: 'yusuf mıraz esen — anasayfa', sections: { about: 'hakkımda', projects: 'projeler', contact: 'iletişim' } },
+        hero: {
+          navAria: 'sayfa bölümleri',
+          intro: "merhaba! ben yusuf mıraz, türkiye'de yaşayan bir yönetim bilişim sistemleri öğrencisiyim. hakkımda daha fazla bilgi almak istersen sayfayı kaydırmaya devam et."
+        },
+        about: {
+          title: 'hakkımda',
+          body: "ben yusuf mıraz esen, dokuz eylül üniversitesi yönetim bilişim sistemleri öğrencisiyim. backend geliştirme, sistem analizi ve veri odaklı uygulamalar üzerine çalışıyorum — son zamanlarda uygulamalı yapay zeka ve karar destek sistemlerine giderek daha fazla odaklanıyorum. crm sistemleri, karar destek dashboard'ları, cbs tabanlı uygulamalar ve gömülü donanım projeleri geliştirdim. çalışmalarım çoğunlukla node.js, python, ilişkisel veritabanları ve üretken yapay zeka etrafında şekilleniyor.",
+          cvLabel: "cv'yi indir",
+          cvHref: 'assets/YusufMirazESEN-TR.pdf'
+        },
+        story: {
+          title: 'hikayem',
+          paragraphs: [
+            "sistemlerin nasıl çalıştığını anlamayı seviyorum. zamanla, ortaya çıkan şey kadar onun nasıl çalıştığının da önemli olduğunu fark ettim. çoğu zaman işin içinde node.js, python, veritabanı ve arada bir haritalar oluyor. şehir içi ulaşım için dashboard'lar, gerçek iş problemleri için backend sistemleri, çevresel veriler için harita tabanlı araçlar ve karar vermeyi destekleyen veri odaklı uygulamalar geliştirdim. son dönemde ise yapay zekayı bu sistemlerin içine nasıl anlamlı şekilde dahil edebileceğime odaklanıyorum. bir ara raspberry pi'a da bulaştım çünkü sadece kod yazmak yeterli gelmemişti.",
+            `zamanla şuna ikna oldum: "çalışan kod" ile "düzgün kurulmuş sistem" tamamen ayrı iki tür ve ben hâlâ ikisini ayırt etmeyi öğreniyorum.`,
+            "burası da inşa ettiğim, bozduğum, baştan yazdığım ve ara sıra ilk denemede tutturduğum (nadir oluyor ama oluyor) şeyleri biriktirdiğim yer. takılın biraz — büyük ihtimalle kurcalanmaya değecek bir şey çıkar."
+          ]
+        },
+        projectsTitle: 'projeler',
+        projects: [
+          {
+            yearGroup: '2026', year: 'may 2026', title: 'kocaeli kentsel ısı adası analizi',
+            meta: 'cbs · uzaktan algılama · kentsel analiz',
+            body: `<p>gebze'de sanayileşmenin kentsel ısı adası etkisi üzerine landsat 8/9 uydu görüntüleri ve qgis kullanarak bir analiz oluşturdum. lst, ndvi ve ndbi haritalarını ürettim, 2016-2025 dönemi değişimini hexagonal grid yapısı üzerinden karşılaştırdım ve sonuçları etkileşimli bir web haritasına dönüştürdüm.</p>`,
+            chips: ['landsat 8/9', 'qgis', 'lst', 'ndvi', 'ndbi', 'hexagonal grid', 'interaktif harita'],
+            links: [
+              { href: 'https://yusufesen1.github.io/kocaeli_lst/', text: 'canlı sürümü gör ↗' },
+              { href: 'https://github.com/yusufesen1/kocaeli_lst', text: "github'da gör ↗" }
+            ]
+          },
+          {
+            year: 'may 2026', title: 'milano building detection',
+            meta: 'derin öğrenme · u-net',
+            body: `<p>erasmus döneminde yaşadığım mahalle olan milano'daki via luca ghini bölgesi için, sentinel-2 uydu görüntülerinden bina sınırlarını otomatik tespit eden bir u-net modeli eğittim. ortalama iou <span class="preserve-case">85.1%</span> — akademik literatürde araştırma kalitesi sayılan bir seviye.</p>`,
+            chips: ['python', 'pytorch', 'u-net · 31m param', 'sentinel-2', 'overture maps', 'colab · t4 gpu'],
+            links: [{ href: 'https://github.com/yusufesen1/gis-deeplearning-milano', text: "github'da gör ↗" }]
+          },
+          {
+            year: 'nis 2026', title: 'paribu code night',
+            meta: 'blockchain · yarışma',
+            body: `<p>paribu sponsorluğundaki hackathon'da takımlara gerçek blockchain datası verildi ve kazancı maksimize edecek bir algoritma geliştirmemiz istendi. veriyi eğitip modelledik, ardından geliştirdiğimiz ticaret algoritması tüm takımlar arasında simüle edildi.</p>`,
+            chips: ['blockchain', 'algoritma tasarımı', 'veri modelleme'],
+            links: [{ href: 'https://github.com/yusufesen1/takim10_MIStrio', text: "github'da gör ↗" }]
+          },
+          {
+            year: 'oca 2026', titleHtml: 'route35 — karar destek<br class="title-br"> sistemi',
+            meta: 'full-stack · cbs · dashboard',
+            body: `<p>i̇zmir toplu taşıma akışlarını analiz eden yönetim panosu. metro, tramvay ve otobüs verilerini birleştirdim, veri tabanı mimarisini ve sistem mantığını tasarladım, veri odaklı kararlar için full-stack arayüz geliştirdim.</p>`,
+            chips: ['full-stack', 'node.js', 'express.js', 'chart.js', 'leaflet.js', 'veri tabanı tasarımı', 'sistem analizi'],
+            links: [{ href: 'https://github.com/yusufesen1/izmir_kds', text: "github'da gör ↗" }]
+          },
+          {
+            yearGroup: '2025', year: 'ara 2025', title: 'dijital sipariş köprüsü',
+            meta: 'backend · node.js',
+            body: `<p>fabrika ile bayiler arası sipariş yönetimini dijitalleştiren bir crm sistemi geliştirdim. backend mimarisini tasarladım, stok ve satış akışlarını entegre ettim. dört kişilik takım.</p>`,
+            chips: ['node.js', 'crm', 'backend mimari', '4 kişilik takım'],
+            links: [{ href: 'https://github.com/yusufesen1/dijital-siparis-koprusu', text: "github'da gör ↗" }]
+          },
+          {
+            year: 'kas 2025', title: 'blue twin',
+            meta: 'cbs · hackathon · 3.lük',
+            body: `<p>i̇zmir'deki su kirliliğini izleyen web tabanlı bir sistem. gerçek zamanlı konumsal veriyle interaktif harita görselleştirmeleri, çevresel verinin erişilebilir sunumu. dört kişilik takım.</p>`,
+            chips: ['cbs', 'qgis', 'google earth', 'interaktif harita', 'gerçek zamanlı veri', '3.lük'],
+            links: []
+          },
+          {
+            year: 'tem — eki 2025', title: 'web developer intern · university of pavia',
+            meta: 'framework çalışması · robotik laboratuvarı',
+            body: `<p>laboratuvarın web framework'ü olan hugo ile çalıştım — go diliyle yazılmış statik site üreticisi. ui/ux akışları tasarladım, ön yüz arayüzleri geliştirdim. partner şirketler için gerçek projelere katkı verdim.</p>`,
+            chips: ['hugo', 'go', 'html', 'css', 'javascript'],
+            links: [{ href: 'assets/Erasmus%20Certificate.pdf', text: 'sertifikayı gör ↗' }]
+          },
+          {
+            year: 'may 2025', title: 'raspberry pi hava kalitesi sistemi',
+            meta: 'iot · python',
+            body: `<p>raspberry pi 3 üzerine hava kalitesi, sıcaklık, nem ve basınç ölçen bir donanım sistemi kurdum. sensör katmanını python ile programladım.</p>`,
+            chips: ['raspberry pi', 'python', 'sensörler'],
+            links: []
+          }
+        ],
+        contact: {
+          title: 'iletişim',
+          nameLabel: 'isim', namePlaceholder: 'adınız',
+          emailLabel: 'e-posta', emailPlaceholder: 'email@ornek.com',
+          messageLabel: 'mesaj', messagePlaceholder: 'ne düşünüyorsunuz?',
+          send: 'mesaj gönder', sending: 'gönderiliyor…', sent: 'gönderildi ✓',
+          error: 'bir hata oluştu — doğrudan e-posta atmayı dene.',
+          dropLine: 'doğrudan ulaş'
+        }
+      }
+    };
+
+    // ── language state ───────────────────────────────────────
+    function getInitialLang() {
+      try {
+        const saved = localStorage.getItem('lang');
+        if (saved === 'en' || saved === 'tr') return saved;
+      } catch (e) {}
+      return 'en'; // default language for first-time visitors
+    }
+    let currentLang = getInitialLang();
+
+    function fixArrowGlyphs() {
+      // prevent iOS emoji rendering for arrow characters
+      document.querySelectorAll('.arrow, .more').forEach(el => {
+        el.childNodes.forEach(n => {
+          if (n.nodeType === 3) n.textContent = n.textContent.replace(/([↗↓→])/g, '$1︎');
+        });
+      });
+    }
+
+    function renderProjects(lang) {
+      const list = document.getElementById('projects-list');
+      list.innerHTML = translations[lang].projects.map(p => {
+        const label = p.yearGroup ? `<div class="year-group-label">${p.yearGroup}</div>` : '';
+        const title = p.titleHtml || p.title;
+        const links = p.links.map(l => `<a class="more" href="${l.href}" target="_blank" rel="noopener">${l.text}</a>`).join('\n            ');
+        const chips = p.chips.map(c => `<span class="chip">${c}</span>`).join('\n              ');
+        return `${label}<article class="project" data-project>
+          <div class="year">${p.year}</div>
+          <div>
+            <div class="title">${title} <span class="arrow">→</span></div>
+          </div>
+          <div class="meta">${p.meta}</div>
+          <div class="body">
+            ${p.body}
+            <div class="chips">
+              ${chips}
+            </div>
+            ${links}
+          </div>
+        </article>`;
+      }).join('\n\n        ');
+    }
+
+    function applyLanguage(lang) {
+      const t = translations[lang];
+      document.documentElement.lang = t.htmlLang;
+      document.body.setAttribute('data-screen-label', t.screenLabel);
+
+      document.querySelector('.logo').setAttribute('aria-label', t.nav.logoAria);
+      document.getElementById('lang-toggle').setAttribute('aria-label', lang === 'en' ? 'switch language to turkish' : 'dili i̇ngilizceye çevir');
+      document.getElementById('lang-option-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('lang-option-eng').classList.toggle('active', lang === 'en');
+
+      document.querySelector('.hero-nav').setAttribute('aria-label', t.hero.navAria);
+      document.getElementById('hero-intro').textContent = t.hero.intro;
+      document.getElementById('hero-about-link').textContent = t.nav.sections.about;
+      document.getElementById('hero-projects-link').textContent = t.nav.sections.projects;
+      document.getElementById('hero-contact-link').textContent = t.nav.sections.contact;
+
+      document.getElementById('about-title').textContent = t.about.title;
+      document.getElementById('about-body').textContent = t.about.body;
+      document.getElementById('cv-link-label').textContent = t.about.cvLabel;
+      document.getElementById('cv-link').setAttribute('href', t.about.cvHref);
+
+      document.getElementById('story-title').textContent = t.story.title;
+      document.getElementById('story-text').innerHTML = t.story.paragraphs.map(p => `<p>${p}</p>`).join('\n          ');
+
+      document.getElementById('projects-title').textContent = t.projectsTitle;
+      renderProjects(lang);
+
+      document.getElementById('contact-title').textContent = t.contact.title;
+      document.getElementById('name-label').textContent = t.contact.nameLabel;
+      document.getElementById('name-input').setAttribute('placeholder', t.contact.namePlaceholder);
+      document.getElementById('email-label').textContent = t.contact.emailLabel;
+      document.getElementById('email-input').setAttribute('placeholder', t.contact.emailPlaceholder);
+      document.getElementById('message-label').textContent = t.contact.messageLabel;
+      document.getElementById('message-input').setAttribute('placeholder', t.contact.messagePlaceholder);
+      document.getElementById('send-label').textContent = t.contact.send;
+      document.getElementById('contact-drop-label').textContent = t.contact.dropLine;
+
+      fixArrowGlyphs();
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'tr' : 'en';
+      try { localStorage.setItem('lang', currentLang); } catch (e) {}
+      applyLanguage(currentLang);
+    });
+
     // ── EmailJS ──────────────────────────────────────────────
     const EMAILJS_PUBLIC_KEY  = 'RPG7LtTULo1in5-GP';
     const EMAILJS_SERVICE_ID  = 'service_cd4gdt9';
@@ -284,33 +412,28 @@
 
     document.getElementById('contact-form').addEventListener('submit', function (e) {
       e.preventDefault();
+      const t = translations[currentLang].contact;
       const btn = document.getElementById('send-btn');
+      const label = document.getElementById('send-label');
       btn.disabled = true;
-      btn.textContent = 'sending…';
+      label.textContent = t.sending;
 
       emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
         .then(() => {
-          btn.textContent = 'sent ✓';
+          label.textContent = t.sent;
           this.reset();
           setTimeout(() => {
             btn.disabled = false;
-            btn.innerHTML = 'send message <span class="arrow">→</span>';
+            label.textContent = t.send;
           }, 3000);
         })
         .catch(() => {
           btn.disabled = false;
-          btn.innerHTML = 'send message <span class="arrow">→</span>';
-          alert('something went wrong — try emailing directly.');
+          label.textContent = t.send;
+          alert(t.error);
         });
     });
     // ─────────────────────────────────────────────────────────
-
-    // prevent iOS emoji rendering for arrow characters
-    document.querySelectorAll('.arrow, .more').forEach(el => {
-      el.childNodes.forEach(n => {
-        if (n.nodeType === 3) n.textContent = n.textContent.replace(/([↗↓→])/g, '$1︎');
-      });
-    });
 
     // typewriter
     (function () {
@@ -338,8 +461,10 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    document.querySelectorAll('[data-project]').forEach(p => {
-      p.addEventListener('click', () => p.classList.toggle('open'));
+    // project cards: click to expand/collapse (delegated — survives language re-renders)
+    document.getElementById('projects-list').addEventListener('click', (e) => {
+      const card = e.target.closest('.project');
+      if (card) card.classList.toggle('open');
     });
 
     // in-page anchors (logo, hero-nav): scroll without ever writing #hash to the url bar
@@ -352,6 +477,8 @@
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+
+    applyLanguage(currentLang);
   </script>
 </body>
 </html>
