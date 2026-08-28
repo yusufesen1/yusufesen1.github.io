@@ -340,6 +340,17 @@
     document.querySelectorAll('[data-project]').forEach(p => {
       p.addEventListener('click', () => p.classList.toggle('open'));
     });
+
+    // in-page anchors (logo, hero-nav): scroll without ever writing #hash to the url bar
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
+        e.preventDefault();
+        if (id === 'top') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+        const target = document.getElementById(id);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   </script>
 </body>
 </html>
