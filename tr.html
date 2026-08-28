@@ -2,6 +2,8 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
+  <meta name="theme-color" content="#141414" />
+  <meta name="color-scheme" content="dark" />
   <title>yusuf mıraz esen</title>
   <meta http-equiv="refresh" content="0; url=index.html">
   <link rel="icon" href="assets/yme_logo.png" type="image/png">
@@ -9,11 +11,11 @@
 <body style="background:#141414">
   <!--
     bu dosya artık kullanılmıyor — site index.html içinde tek sayfa olarak
-    birleştirildi, dil değişimi orada javascript ile yapılıyor (localStorage'da tutuluyor).
+    birleştirildi, dil değişimi orada javascript ile yapılıyor (hiçbir yerde
+    hatırlanmıyor, her ziyarette İngilizce açılıyor).
     bu dosya sadece eski /tr.html linklerinin kırılmaması için burada duruyor.
   -->
   <script>
-    try { localStorage.setItem('lang', 'tr'); } catch (e) {}
     location.replace('index.html');
   </script>
   <p><a href="index.html">devam etmek için tıklayın →</a></p>

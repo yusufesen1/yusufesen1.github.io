@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#141414" />
+  <meta name="color-scheme" content="dark" />
   <title>yusuf mıraz esen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,8 @@
 </head>
 <body data-screen-label="01 Home (EN)" style="background-color: rgb(6, 6, 6)">
   <div class="glow"></div>
+  <div class="cursor-light" id="cursor-light" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
     <div class="nav-inner">
@@ -44,7 +48,7 @@
     <!-- about -->
     <section class="section-block about" id="about">
       <div class="about-hero">
-        <div class="about-grid">
+        <div class="about-grid reveal">
           <figure class="photo">
             <img src="assets/yusuf.jpeg" alt="yusuf mıraz esen" />
           </figure>
@@ -67,11 +71,11 @@
           </div>
         </div>
       </div>
-      <div class="about-story">
+      <div class="about-story reveal">
         <h3 class="story-subtitle" id="story-title">my story</h3>
         <div class="story-text" id="story-text">
           <p>i like figuring out how systems work. over time i've realized that how something works matters as much as what it produces. most of the time that means node.js, python, a database and the occasional map. i've built dashboards for urban transportation, backends for real business problems, map-based tools for environmental data and data-driven applications that support decision-making. lately i've been focused on figuring out how to meaningfully fold ai into these systems. somewhere along the way i also got into raspberry pi because apparently writing code wasn't enough.</p>
-          <p>over time i've become convinced that "working code" and "well-built systems" are two entirely different animals, and i'm still learning to tell them apart.</p>
+          <p>over time i've become convinced that "working code" and "well-built systems" are two entirely different animals and i'm still learning to tell them apart.</p>
           <p>this site is where i keep the things i've built, broken, rebuilt, and occasionally gotten right on the first try (rare, but it happens). stick around — there's probably something here worth poking at.</p>
         </div>
       </div>
@@ -103,7 +107,10 @@
         </form>
         <aside class="contact-side">
           <div class="contact-label" id="contact-drop-label">drop a line directly</div>
-          <a class="contact-mail preserve-case" href="mailto:yusufmiraz04@gmail.com">yusufmiraz04@gmail.com</a>
+          <div class="contact-mail-row">
+            <a class="contact-mail preserve-case" href="mailto:yusufmiraz04@gmail.com">yusufmiraz04@gmail.com</a>
+            <button type="button" class="copy-btn" id="copy-email-btn">copy</button>
+          </div>
           <div class="contact-socials">
             <a class="btn" href="https://github.com/yusufesen1" target="_blank" rel="noopener">github <span class="arrow">↗</span></a>
             <a class="btn" href="https://www.linkedin.com/in/yusufmesen/" target="_blank" rel="noopener">linkedin <span class="arrow">↗</span></a>
@@ -161,7 +168,7 @@
           {
             year: 'may 2026', title: 'milano building detection',
             meta: 'deep learning · u-net',
-            body: `<p>trained a u-net model to detect building footprints from sentinel-2 satellite imagery over via luca ghini, milan — the neighborhood where i lived during my erasmus exchange. reached <span class="preserve-case">85.1%</span> mean iou, a research-grade level in academic literature.</p>`,
+            body: `<p>trained a u-net model to detect building footprints from sentinel-2 satellite imagery over via luca ghini, milan — the neighborhood where i lived during my erasmus exchange. reached <span class="preserve-case count-up" data-count-to="85.1" data-suffix="%">0%</span> mean iou, a research-grade level in academic literature.</p>`,
             chips: ['python', 'pytorch', 'u-net · 31m params', 'sentinel-2', 'overture maps', 'colab · t4 gpu'],
             links: [{ href: 'https://github.com/yusufesen1/gis-deeplearning-milano', text: 'view on github ↗' }]
           },
@@ -215,7 +222,8 @@
           messageLabel: 'message', messagePlaceholder: "what's on your mind?",
           send: 'send message', sending: 'sending…', sent: 'sent ✓',
           error: 'something went wrong — try emailing directly.',
-          dropLine: 'drop a line directly'
+          dropLine: 'drop a line directly',
+          copy: 'copy', copied: 'copied ✓'
         }
       },
       tr: {
@@ -255,7 +263,7 @@
           {
             year: 'may 2026', title: 'milano building detection',
             meta: 'derin öğrenme · u-net',
-            body: `<p>erasmus döneminde yaşadığım mahalle olan milano'daki via luca ghini bölgesi için, sentinel-2 uydu görüntülerinden bina sınırlarını otomatik tespit eden bir u-net modeli eğittim. ortalama iou <span class="preserve-case">85.1%</span> — akademik literatürde araştırma kalitesi sayılan bir seviye.</p>`,
+            body: `<p>erasmus döneminde yaşadığım mahalle olan milano'daki via luca ghini bölgesi için, sentinel-2 uydu görüntülerinden bina sınırlarını otomatik tespit eden bir u-net modeli eğittim. ortalama iou <span class="preserve-case count-up" data-count-to="85.1" data-suffix="%">0%</span> — akademik literatürde araştırma kalitesi sayılan bir seviye.</p>`,
             chips: ['python', 'pytorch', 'u-net · 31m param', 'sentinel-2', 'overture maps', 'colab · t4 gpu'],
             links: [{ href: 'https://github.com/yusufesen1/gis-deeplearning-milano', text: "github'da gör ↗" }]
           },
@@ -309,20 +317,23 @@
           messageLabel: 'mesaj', messagePlaceholder: 'ne düşünüyorsunuz?',
           send: 'mesaj gönder', sending: 'gönderiliyor…', sent: 'gönderildi ✓',
           error: 'bir hata oluştu — doğrudan e-posta atmayı dene.',
-          dropLine: 'doğrudan ulaş'
+          dropLine: 'doğrudan ulaş',
+          copy: 'kopyala', copied: 'kopyalandı ✓'
         }
       }
     };
 
+    // ── console easter egg ──────────────────────────────────────
+    console.log(
+      '%ci built to understand.%c\n\nhey, poking around the code? that\'s basically my favorite hobby too.\n\ngithub   → https://github.com/yusufesen1\nlinkedin → https://www.linkedin.com/in/yusufmesen/\nemail    → yusufmiraz04@gmail.com\n\nfound a bug or just want to say hi — feel free to reach out.',
+      'font-style:italic;font-size:15px;color:#ededed;',
+      'font-size:12px;color:#9a9a9a;line-height:1.6;'
+    );
+    // ─────────────────────────────────────────────────────────
+
     // ── language state ───────────────────────────────────────
-    function getInitialLang() {
-      try {
-        const saved = localStorage.getItem('lang');
-        if (saved === 'en' || saved === 'tr') return saved;
-      } catch (e) {}
-      return 'en'; // default language for first-time visitors
-    }
-    let currentLang = getInitialLang();
+    // always opens in english — the language toggle only affects the current visit, nothing is remembered
+    let currentLang = 'en';
 
     function fixArrowGlyphs() {
       // prevent iOS emoji rendering for arrow characters
@@ -333,14 +344,47 @@
       });
     }
 
+    // counts a [data-count-to] element up from 0 to its target value once its project card opens
+    function animateCountUp(el) {
+      const raw = el.getAttribute('data-count-to');
+      const target = parseFloat(raw);
+      if (Number.isNaN(target)) return;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const decimals = (raw.split('.')[1] || '').length;
+      const duration = 900;
+      const start = performance.now();
+      function step(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+        el.textContent = (target * eased).toFixed(decimals) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    // scroll reveal: fades/lifts .reveal elements in once they enter the viewport
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    function observeReveals() {
+      document.querySelectorAll('.reveal:not(.in-view)').forEach(el => revealObserver.observe(el));
+    }
+
     function renderProjects(lang) {
       const list = document.getElementById('projects-list');
-      list.innerHTML = translations[lang].projects.map(p => {
+      list.innerHTML = translations[lang].projects.map((p, i) => {
         const label = p.yearGroup ? `<div class="year-group-label">${p.yearGroup}</div>` : '';
         const title = p.titleHtml || p.title;
         const links = p.links.map(l => `<a class="more" href="${l.href}" target="_blank" rel="noopener">${l.text}</a>`).join('\n            ');
         const chips = p.chips.map(c => `<span class="chip">${c}</span>`).join('\n              ');
-        return `${label}<article class="project" data-project>
+        const delay = Math.min(i * 60, 300);
+        return `${label}<article class="project reveal" data-project style="transition-delay:${delay}ms">
           <div class="year">${p.year}</div>
           <div>
             <div class="title">${title} <span class="arrow">→</span></div>
@@ -355,6 +399,7 @@
           </div>
         </article>`;
       }).join('\n\n        ');
+      observeReveals();
     }
 
     function applyLanguage(lang) {
@@ -393,13 +438,15 @@
       document.getElementById('message-input').setAttribute('placeholder', t.contact.messagePlaceholder);
       document.getElementById('send-label').textContent = t.contact.send;
       document.getElementById('contact-drop-label').textContent = t.contact.dropLine;
+      const copyBtn = document.getElementById('copy-email-btn');
+      copyBtn.classList.remove('copied');
+      copyBtn.textContent = t.contact.copy;
 
       fixArrowGlyphs();
     }
 
     document.getElementById('lang-toggle').addEventListener('click', () => {
       currentLang = currentLang === 'en' ? 'tr' : 'en';
-      try { localStorage.setItem('lang', currentLang); } catch (e) {}
       applyLanguage(currentLang);
     });
 
@@ -435,6 +482,87 @@
     });
     // ─────────────────────────────────────────────────────────
 
+    // cursor light — a small white glow that trails the mouse with a soft lag
+    (function () {
+      const el = document.getElementById('cursor-light');
+      if (!el) return;
+      const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!canHover || reduceMotion) return;
+
+      const SIZE = 90;
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let x = mouseX;
+      let y = mouseY;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        el.classList.add('active');
+      }, { passive: true });
+
+      window.addEventListener('mouseleave', () => el.classList.remove('active'));
+
+      (function loop() {
+        x += (mouseX - x) * 0.15;
+        y += (mouseY - y) * 0.15;
+        el.style.transform = `translate3d(${x - SIZE / 2}px, ${y - SIZE / 2}px, 0)`;
+        requestAnimationFrame(loop);
+      })();
+    })();
+
+    // magnetic buttons — nudges toward the cursor while hovered, snaps back on leave
+    (function () {
+      const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!canHover || reduceMotion) return;
+
+      const MAX_PULL = 8; // px
+      const STRENGTH = 0.3;
+
+      document.querySelectorAll('.btn, .send-btn, .copy-btn').forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+          const rect = el.getBoundingClientRect();
+          const relX = e.clientX - (rect.left + rect.width / 2);
+          const relY = e.clientY - (rect.top + rect.height / 2);
+          const x = Math.max(-MAX_PULL, Math.min(MAX_PULL, relX * STRENGTH));
+          const y = Math.max(-MAX_PULL, Math.min(MAX_PULL, relY * STRENGTH));
+          el.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+      });
+    })();
+
+    // copy email to clipboard
+    (function () {
+      const EMAIL = 'yusufmiraz04@gmail.com';
+      const btn = document.getElementById('copy-email-btn');
+      let resetTimer;
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(EMAIL);
+        } catch (e) {
+          // fallback for browsers/contexts without the async clipboard api
+          const ta = document.createElement('textarea');
+          ta.value = EMAIL;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e2) {}
+          document.body.removeChild(ta);
+        }
+        btn.textContent = translations[currentLang].contact.copied;
+        btn.classList.add('copied');
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => {
+          btn.textContent = translations[currentLang].contact.copy;
+          btn.classList.remove('copied');
+        }, 1800);
+      });
+    })();
+
     // typewriter
     (function () {
       const el = document.querySelector('.motto');
@@ -454,9 +582,13 @@
     })();
 
     const nav = document.getElementById('nav');
+    const scrollProgress = document.getElementById('scroll-progress');
     const onScroll = () => {
       if (window.scrollY > 12) nav.classList.add('scrolled');
       else nav.classList.remove('scrolled');
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+      scrollProgress.style.width = pct + '%';
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -464,7 +596,11 @@
     // project cards: click to expand/collapse (delegated — survives language re-renders)
     document.getElementById('projects-list').addEventListener('click', (e) => {
       const card = e.target.closest('.project');
-      if (card) card.classList.toggle('open');
+      if (!card) return;
+      card.classList.toggle('open');
+      if (card.classList.contains('open')) {
+        card.querySelectorAll('.count-up').forEach(animateCountUp);
+      }
     });
 
     // in-page anchors (logo, hero-nav): scroll without ever writing #hash to the url bar
